@@ -1,0 +1,62 @@
+p {
+    margin: 10px 0;
+}
+
+.has-children > p {
+    cursor: pointer;
+}
+.has-children > p::before {
+    content: "\f0d7";
+    font-family: "FontAwesome";
+    display: inline-block;
+    margin: 0 5px 0 -5px;
+
+}
+
+.has-children.closed > p::before {
+    transform: rotate(-90deg);
+}
+
+.has-children.closed div {
+    display: none;
+}
+
+.sort-btn {
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: grey 0 4px 9px -2px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.sort-btn:active {
+    box-shadow: none;
+}
+
+.fa-search {
+    margin-right: -30px;
+    margin-left: 10px;
+    position: relative;
+}
+
+#filter {
+    height: 25px;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 3px 5px 3px 30px;
+    outline: none;
+}
+
+#controls {
+    margin: 20px;
+}
+
+#output {
+    margin-left: 20px;
+}
+
+#output div {
+    margin-left: 20px;
+}
