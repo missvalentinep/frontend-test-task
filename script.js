@@ -13,17 +13,11 @@ const fetchData = async () => {
 };
 
 const sortById = (node1, node2) => {
-    if (node1.id === node2.id) return 0;
-
-    return node1.id < node2.id ? -1 : 1;
+    return node1.id - node2.id;
 };
 
-const sortByTitle = (node1, node2) => { // TODO: combine 2 functions together
-    if (node1.title === node2.title) return 0;
-    if (sortType === 'asc') return node1.title < node2.title ? -1 : 1;
-
-    return node1.title < node2.title ? 1 : -1;
-    
+const sortByTitle = (node1, node2) => {
+    return sortType === 'asc' ? node1.title.localeCompare(node2.title) : node2.title.localeCompare(node1.title);
 };
 
 
